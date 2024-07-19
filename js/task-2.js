@@ -1,23 +1,23 @@
 class Storage {
   #items;
   constructor(items) {
-    this.items = items;
+    this.#items = items;
   }
 
   getItems() {
-    return this.items;
+    return this.#items;
   }
 
   addItem(item) {
-    this.items.push(item);
+    this.#items.push(item);
   }
 
   // https://www.w3schools.com/jsref/jsref_splice.asp
 
   removeItem(item) {
-    let index = this.items.indexOf(item);
+    let index = this.#items.indexOf(item);
     if (index !== -1) {
-      this.items.splice(index, 1);
+      this.#items.splice(index, 1);
     }
   }
 }
