@@ -12,8 +12,6 @@ class Storage {
     this.#items.push(item);
   }
 
-  // https://www.w3schools.com/jsref/jsref_splice.asp
-
   removeItem(item) {
     let index = this.#items.indexOf(item);
     if (index !== -1) {
@@ -22,14 +20,14 @@ class Storage {
   }
 }
 
-const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+const storage = new Storage(['Nanitoids', 'Prolonger', 'Antigravitator']);
 console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
 
-storage.addItem("Droid");
+storage.addItem('Droid');
 console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
 
-storage.removeItem("Prolonger");
+storage.removeItem('Prolonger');
 console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
 
-storage.removeItem("Scaner");
+storage.removeItem('Scaner');
 console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
